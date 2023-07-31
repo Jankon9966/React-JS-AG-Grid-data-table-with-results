@@ -4,6 +4,7 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import axios from "axios";
 import Loading from "./Loading";
+//import { PuffLoader } from "react-spinners";
 
 const Table = () => {
   const columnDefs = [

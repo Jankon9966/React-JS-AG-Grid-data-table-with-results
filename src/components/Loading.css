@@ -3,11 +3,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: #222222;
-}
-
-.loading h2 {
-  color: #fff;
-  font-size: 28px;
-  padding-top: 350px;
+  padding-bottom: 130px;
 }
