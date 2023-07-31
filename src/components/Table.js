@@ -17,6 +17,8 @@ const Table = () => {
     { headerName: "Price Change Percent", field: "priceChangePercent" },
     { headerName: "Average Price", field: "averagePrice" },
     { headerName: "Previous Close Price", field: "prevClosePrice" },
+    { headerName: "Open Time", field: "openTime"},
+    { headerName: "Close Time", field: "closeTime"},
   ];
 
   const manageTable = { sortable: true, flex: 1 };
@@ -42,8 +44,11 @@ const Table = () => {
           priceChangePercent: result.priceChangePercent,
           averagePrice: result.weightedAvgPrice,
           prevClosePrice: result.prevClosePrice,
+          openTime: new Date(result.openTime).toLocaleDateString(),
+          closeTime: new Date(result.closeTime).toLocaleDateString(),
         };
       });
+
       setResult(results);
       setIsLoading(true);
     } catch (error) {
