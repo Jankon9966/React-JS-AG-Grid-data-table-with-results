@@ -44,11 +44,11 @@ const Table = () => {
           priceChangePercent: result.priceChangePercent,
           averagePrice: result.weightedAvgPrice,
           prevClosePrice: result.prevClosePrice,
-          openTime: new Date(result.openTime).toLocaleDateString(),
-          closeTime: new Date(result.closeTime).toLocaleDateString(),
+          openTime: new Date(result.openTime).toLocaleDateString("en-GB"),
+          closeTime: new Date(result.closeTime).toLocaleDateString("en-GB"),
         };
       });
-
+      console.log(results)
       setResult(results);
       setIsLoading(true);
     } catch (error) {
