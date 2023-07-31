@@ -3,7 +3,7 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import axios from "axios";
-import Loading from "./Loading";
+import Loading from "./Spinner/Loading";
 //import { PuffLoader } from "react-spinners";
 
 const Table = () => {
@@ -49,7 +49,6 @@ const Table = () => {
           closeTime: new Date(result.closeTime).toLocaleDateString("en-GB"),
         };
       });
-      console.log(results)
       setResult(results);
       setIsLoading(true);
     } catch (error) {
